@@ -1,0 +1,85 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 13px;
+}
+.u-text-centered {
+    text-align: center
+}
+
+.u-flat {
+    margin: 0 !important;
+}
+
+.container--small {
+    max-width: 670px;
+}
+
+.logo {
+    font-weight: 700;
+    color: #fff;
+    text-decoration: none;
+}
+
+.logo span {
+    font-weight: 300;
+    opacity: 0.7;
+}
+
+.hero {
+    background-color: #333;
+    color: #fff;
+    padding: 0;
+    background-image: url(../images/woodworking.jpg);
+    position: relative;
+}
+
+.hero:before {
+    display: block;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.8));
+}
+
+.header {
+    padding: 24px 0;
+}
+
+.intro {
+    max-width: 640px;
+    margin: 140px auto;
+}
+
+.tagline {
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 42px;
+    font-family: 'Oswald';
+}
+
+.description {
+    font-size: 24px;
+    font-weight: 100;
+    margin-bottom: 48px;
+}
+
+section {
+    padding: 100px 0;
+}
+
+.snapshot {
+    background-color: #0D1824;
+    color: #fff;
+}
+
+.how {
+    background-color: #f4f4f4;
+}
+
+.contact {
+    background-color: #4a90e2;
+    color: #fff;
+}
