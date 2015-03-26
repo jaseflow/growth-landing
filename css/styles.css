@@ -3,6 +3,10 @@ body {
     font-size: 13px;
 }
 
+.hideme {
+    opacity:0;
+}
+
 .button-action {
     background: #81BB46;
     color: #fff;
@@ -24,12 +28,16 @@ body {
     margin-bottom: 2.828em;
 }
 
+.u-spacer-small {
+    margin-bottom: 1.414em;
+}
+
 .u-light {
     font-weight: 100;
 }
 
 .container--small {
-    max-width: 670px;
+    max-width: 600px;
 }
 
 .container--smallest {
@@ -116,11 +124,16 @@ section {
 .screenshot {
     width: 262px;
     height: 464px;
+    background-image: url(../images/screen-1.png);
+    background-size: cover;
+    position: absolute;
+    top: 70px;
+    left: 23px;
 }
 
 .how {
     background-color: #f4f4f4;
-    padding-top: 100px;
+    padding-top: 150px;
 }
 
 .contact {
