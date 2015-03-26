@@ -2,6 +2,16 @@ body {
     font-family: 'Roboto', sans-serif;
     font-size: 13px;
 }
+
+.button-action {
+    background: #81BB46;
+    color: #fff;
+    border: 0;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.8);
+    height: 50px;
+    line-height: 50px;
+}
+
 .u-text-centered {
     text-align: center
 }
@@ -10,14 +20,27 @@ body {
     margin: 0 !important;
 }
 
+.u-spacer {
+    margin-bottom: 2.828em;
+}
+
+.u-light {
+    font-weight: 100;
+}
+
 .container--small {
     max-width: 670px;
+}
+
+.container--smallest {
+    max-width: 400px;
 }
 
 .logo {
     font-weight: 700;
     color: #fff;
     text-decoration: none;
+    font-size: 20px;
 }
 
 .logo span {
@@ -67,19 +90,59 @@ body {
 }
 
 section {
-    padding: 100px 0;
+    padding: 50px 0;
 }
 
 .snapshot {
     background-color: #0D1824;
     color: #fff;
+    padding-left: 24px;
+    padding-right: 24px;
+    position: relative;
+}
+
+.iphone {
+    width: 300px;
+    height: 620px;
+    background-size: cover;
+    background-image: url(../images/iphone.png);
+    background-repeat: no-repeat;
+    left: 50%;
+    margin-left: -150px;
+    position: absolute;
+    top: -36px;
+}
+
+.screenshot {
+    width: 262px;
+    height: 464px;
 }
 
 .how {
     background-color: #f4f4f4;
+    padding-top: 100px;
 }
 
 .contact {
     background-color: #4a90e2;
     color: #fff;
+}
+
+.signup input[type=text] {
+    border: 1px solid #fff;
+    background: none;
+    color: #fff;
+}
+
+.signup input[type=submit] {
+    background: #fff;
+    color: #333;
+    border: 0;
+    box-shadow: 0 1px 0 rgba(0,0,0,0.4);
+    margin-top: 1.414em;;
+}
+
+.footer {
+    padding: 24px 0;
+    background: #1D3047;
 }
