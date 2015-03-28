@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="85px" height="85px" viewBox="0 0 85 85" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>clock-face</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Desktop-HD" sketch:type="MSArtboardGroup" transform="translate(-678.000000, -938.000000)">
+            <g id="clocks" sketch:type="MSLayerGroup" transform="translate(678.000000, 938.000000)">
+                <g id="clock-face" sketch:type="MSShapeGroup">
+                    <ellipse id="Oval" fill="#6182A5" cx="42.3275792" cy="42.5" rx="42.3267327" ry="42.5"></ellipse>
+                    <path d="M42.3267327,8.5 C61.0292228,8.5 76.1881188,23.72265 76.1881188,42.5 C76.1881188,61.27735 61.0300693,76.5 42.3267327,76.5 C23.6259356,76.5 8.46534653,61.27735 8.46534653,42.5 C8.46534653,23.72265 23.6267822,8.5 42.3267327,8.5 L42.3267327,8.5 Z" id="Shape" fill="#FFFFFF"></path>
+                    <path d="M42.3267327,8.51275 C32.3325446,8.51275 23.3533515,12.8639 17.1567178,19.77865 C23.1544158,14.3616 31.0872921,11.06275 39.7871287,11.06275 C58.4828465,11.06275 73.6366634,26.27945 73.6366634,45.05 C73.6366634,53.78545 70.3512624,61.7491 64.956297,67.76965 C71.8462426,61.5485 76.1779604,52.53425 76.1779604,42.5 C76.1779604,23.72945 61.023297,8.51275 42.3267327,8.51275 L42.3267327,8.51275 Z" id="Shape" fill="#DAD9D9"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

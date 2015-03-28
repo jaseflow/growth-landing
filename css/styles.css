@@ -20,6 +20,11 @@ body {
     text-align: center
 }
 
+.u-underlined {
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 12px;
+}
+
 .u-flat {
     margin: 0 !important;
 }
@@ -158,4 +163,71 @@ section {
 .footer {
     padding: 24px 0;
     background: #1D3047;
+}
+
+.clock {
+    width: 85px;
+    height: 85px;
+    background-image: url(../images/clock-face.svg);
+    background-size: 85px;
+    background-repeat: no-repeat;
+    margin: 0 auto;
+    position: relative;
+}
+
+.clock .dot {
+    position: absolute;
+    left: 50%;
+    margin-left: -7px;
+    width: 14px;
+    height: 14px;
+    top: 50%;
+    margin-top: -7px;
+    background-image: url(../images/clock-dot.svg);
+    background-size: 14px;
+    background-repeat: no-repeat;
+}
+
+.clock .bighand {
+    position: absolute;
+    background-image: url(../images/clock-bighand.svg);
+    width: 20px;
+    height: 20px;
+    background-repeat: no-repeat;
+    left: 23px;
+    top: 22px;
+    transform-origin: bottom right;
+}
+
+.clock .smallhand {
+    position: absolute;
+    background-image: url(../images/clock-smallhand.svg);
+}
+
+.highlight {
+    opacity: 0.5;
+    transition: all 0.25s ease;
+    position: relative;
+    cursor: pointer;
+}
+
+.highlight:before {
+    position: absolute;
+    left: -5px;
+    width: 5px;
+    height: 100%;
+    background-color: #3E7CC2;
+    content: '';
+    display: block;
+    opacity: 0;
+    transition: all 0.25s ease;
+}
+
+.highlight:hover {
+    opacity: 1;
+}
+
+.highlight:hover:before {
+    transform: translateX(-24px);
+    opacity: 1;
 }
