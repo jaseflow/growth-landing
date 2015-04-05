@@ -22,14 +22,17 @@
                 <p class="u-flat u-pull-right login">Already a member? <a href="login.html" id="toggle-login">Login</a></p>
             </header>
             <div class="content">
-                <div class="intro">
-                    <h1 class="tagline u-flat">Get your staff learning in sixty seconds</h1>
-                    <h2 class="description u-flat">Now that's training delivered differently&hellip;</h2>
-                    <div class="intro__actions">
-                        <a href="register.html" class="button button-action intro__action">Get started</a>
-                        <a href="how.html" class="button intro__action">Find out how</a>
+                <form action="confirmation.html" class="signup">
+                    <div class="signup__group">
+                        <label for="companyName" class="signup__label">Email address</label>
+                        <input type="email" class="u-full-width">
                     </div>
-                </div>
+                    <div class="signup__group">
+                        <label for="yourEmail" class="signup__label">Password</label>
+                        <input type="password" class="u-full-width">
+                    </div>
+                    <input type="submit" class="button button-action intro__action u-flat u-full-width" value="Login">
+                </form>
             </div>
         </div>
     </section>
