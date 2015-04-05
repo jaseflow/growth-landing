@@ -1,0 +1,302 @@
+@import "normalize.css"
+@import "skeleton.css"
+
+body
+    font-family: 'Roboto', sans-serif
+    font-size: 13px
+
+.hideme
+    opacity:0
+
+.login
+    display: none
+
+.button-action
+    background: #81BB46
+    border: 0
+    color: #1D3047
+    font-size: 14px
+    font-weight: 700
+    box-shadow: 0 1px 1px rgba(0,0,0,0.8)
+
+.u-text-centered
+    text-align: center
+
+
+.u-underlined
+    border-bottom: 1px solid #ddd
+    padding-bottom: 12px
+
+
+.u-flat
+    margin: 0 !important
+
+
+.u-spacer
+    margin-bottom: 2.828em
+
+
+.u-spacer-small
+    margin-bottom: 1.414em
+
+
+.u-light
+    font-weight: 100
+
+
+.container--small
+    max-width: 600px
+
+
+.container--smallest
+    max-width: 400px
+
+
+.logo
+    font-family: 'Khula'
+    text-transform: uppercase
+    font-weight: 700
+    color: #fff
+    text-decoration: none
+    font-size: 20px
+    display: flex
+    align-items: center
+    line-height: 1
+
+.logo__cube
+    float: left
+    width: 32px
+    margin-right: 12px
+
+.logo:hover
+    color: inherit
+
+.logo--dark
+    color: #333
+
+.logo strong
+    font-weight: 300
+    opacity: 0.7
+
+
+.hero
+    min-height: 100vh
+    background: #1D3047
+    color: #fff
+    padding: 0
+    position: relative
+
+.hero:before
+    display: block
+    content: ''
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+
+.header
+    padding: 24px 0 12px 0
+    border-bottom: 1px solid rgba(255,255,255,0.1)
+    display: flex
+    align-items: center
+    justify-content: space-between
+
+.screenie
+    display: block
+    position: absolute
+    bottom: 40px
+    right: 40px
+    width: 300px
+    height: 579px
+    background-image: url(../images/questions.png)
+    background-repeat: no-repeat
+    background-size: 100%
+
+.masthead .header
+    padding-bottom: 24px
+    border-bottom: 1px solid rgba(255,255,255,0.25)
+
+.content
+    display: flex
+    justify-content: center
+    flex-direction: column
+    min-height: calc(100vh - 69px)
+
+.intro__actions
+    margin-top: 48px
+
+.intro__action
+    display: block
+
+.intro
+    max-width: 640px
+
+.tagline
+    font-weight: 700
+    font-family: 'Khula'
+    font-size: 24px
+    font-weight: 700
+
+.description
+    font-size: 18px
+    font-weight: 100
+    margin-bottom: 48px
+    line-height: 1.5
+
+
+section
+    padding: 50px 0
+
+
+.snapshot
+    background-color: #0D1824
+    color: #fff
+    padding-left: 24px
+    padding-right: 24px
+    position: relative
+
+
+.iphone
+    width: 300px
+    height: 620px
+    background-size: cover
+    background-image: url(../images/iphone.png)
+    background-repeat: no-repeat
+    left: 50%
+    margin-left: -150px
+    position: absolute
+    top: -36px
+
+
+.screenshot
+    width: 262px
+    height: 464px
+    background-image: url(../images/screen-1.png)
+    background-size: cover
+    position: absolute
+    top: 70px
+    left: 23px
+
+
+.how
+    background-color: #f4f4f4
+    padding-top: 150px
+
+
+.contact
+    background-color: #4a90e2
+    color: #fff
+
+
+.signup input[type=text]
+    border: 1px solid #fff
+    background: none
+    color: #fff
+
+
+.signup input[type=submit]
+    background: #fff
+    color: #333
+    border: 0
+    box-shadow: 0 1px 0 rgba(0,0,0,0.4)
+    margin-top: 1.414em
+
+
+.footer
+    padding: 24px 0
+    background: #1D3047
+
+
+.clock
+    width: 85px
+    height: 85px
+    background-image: url(../images/clock-face.svg)
+    background-size: 85px
+    background-repeat: no-repeat
+    margin: 0 auto
+    position: relative
+
+
+.clock .dot
+    position: absolute
+    left: 50%
+    margin-left: -7px
+    width: 14px
+    height: 14px
+    top: 50%
+    margin-top: -7px
+    background-image: url(../images/clock-dot.svg)
+    background-size: 14px
+    background-repeat: no-repeat
+
+
+.clock .bighand
+    position: absolute
+    background-image: url(../images/clock-bighand.svg)
+    width: 20px
+    height: 20px
+    background-repeat: no-repeat
+    left: 23px
+    top: 22px
+    transform-origin: bottom right
+
+
+.clock .smallhand
+    position: absolute
+    background-image: url(../images/clock-smallhand.svg)
+
+
+.highlight
+    opacity: 0.5
+    transition: all 0.25s ease
+    position: relative
+    cursor: pointer
+
+
+.highlight:before
+    position: absolute
+    left: -5px
+    width: 5px
+    height: 100%
+    background-color: #3E7CC2
+    content: ''
+    display: block
+    opacity: 0
+    transition: all 0.25s ease
+
+
+.highlight:hover
+    opacity: 1
+
+
+.highlight:hover:before
+    transform: translateX(-24px)
+    opacity: 1
+
+
+.masthead
+    padding-top: 0
+    background: #1D3047
+    color: #fff
+
+
+.summary
+    font-size: 18px
+    font-weight: 300
+
+
+@media(min-width: 768px)
+    .login
+        display: block
+
+    .intro__action
+        display: inline-block
+        &:first-child
+            margin-right: 12px
+
+    .tagline
+        font-size: 32px
+
+    .description
+        font-size: 24px
