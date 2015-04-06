@@ -3,3 +3,4 @@ _config
 .DS_Store
 releases
 rootkey.csv
+public/components

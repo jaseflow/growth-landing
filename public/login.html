@@ -24,16 +24,27 @@
         </header>
         <div class="content">
             <div class="container">
-                <form action="confirmation.html" class="signup">
+                <form action="admin.html" class="signup">
                     <div class="signup__group">
-                        <label for="companyName" class="signup__label">Email address</label>
-                        <input type="email" class="u-full-width">
+                        <input type="email" class="u-full-width" placeholder="Email address">
                     </div>
-                    <div class="signup__group">
-                        <label for="yourEmail" class="signup__label">Password</label>
-                        <input type="password" class="u-full-width">
+                    <div class="signup__group u-flat">
+                        <input type="password" class="u-full-width" placeholder="Password">
                     </div>
-                    <input type="submit" class="button button-action intro__action u-flat u-full-width" value="Login">
+                    <div class="signup__actions">
+                        <div class="row">
+                            <div class="column one-half">
+                                <label>
+                                    <input type="checkbox" checked>
+                                    <span class="label-body">Remember me</span>
+                                </label>
+                            </div>
+                            <div class="column one-half">
+                                <p class="u-pull-right"><a href="#">Forgot password?</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <input type="submit" class="button button-action u-full-width intro__action u-flat" value="Login">
                 </form>
             </div>
         </div>

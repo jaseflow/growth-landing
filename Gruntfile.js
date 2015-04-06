@@ -63,7 +63,13 @@ module.exports = function(grunt) {
                 },
                 files: [
                     'public/css/styles.css',
-                    'public/index.html'
+                    'public/index.html',
+                    'public/confirmation.html',
+                    'public/register.html',
+                    'public/login.html',
+                    'public/admin.html',
+                    'public/admin-add.html',
+                    'public/admin-added.html'
                 ]
             }
         },
