@@ -1,9 +1,10 @@
-<div class="timeline">
+<div class="timeline" ng-controller="TimelineController">
     <h4>Latest timeline</h4>
-    <ul class="unstyled timeline__list" ng-repeat="item in timeline">
-        <li class="timeline__item">
-            <small class="timeline__time">{[{ date }]}</small>
-            <p><a href="#">{[{ personName }]}</a> {[{ actiontext }]} <strong>{[{ itemName }]}</strong>.</p>
+    <ul class="unstyled timeline__list">
+        <li class="timeline__item" ng-repeat="item in timeline">
+            <small class="timeline__time">{[{ item.date }]}</small>
+            <p><a href="#">{[{ item.personName }]}</a> {[{ item.actiontext }]} <strong>{[{ item.itemName }]}</strong>.</p>
         </li>
     </ul>
+    <pre ng-bind="timeline | json"></pre>
 </div>
