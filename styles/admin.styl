@@ -10,7 +10,7 @@
 @import "components/cards"
 @import "components/staff"
 @import "components/flyouts"
-@import "components/activity"
+@import "components/timeline"
 @import "components/search"
 
 html
@@ -27,8 +27,11 @@ img
     position: relative
     padding-left: 60px
     height: 100%
+    overflow-y: auto
 
 .wrapper__hd
+    position: fixed
+    width: 100%
     height: 70px
     padding: 0 24px
     display: flex
@@ -36,12 +39,12 @@ img
     justify-content: space-between
     background-color: #fff
     box-shadow: 0 1px 1px rgba(0,0,0,0.3)
-    position: relative
     z-index: 20
 
 .wrapper__body
     padding: 24px
     padding-right: 324px
+    padding-top: 94px
 
 .wrapper__title
     font-size: 20px
@@ -55,7 +58,7 @@ img
     text-decoration: none
 
 .wrapper__sidebar
-    position: absolute
+    position: fixed
     right: 0
     top: 70px
     z-index: 10
@@ -72,3 +75,25 @@ img
     height: 100%
     width: $menuWidth
     z-index: 100
+
+.comments__item
+    padding: 12px 0
+    border-top: 1px solid #eee
+    &:first-child
+        padding-top: 0
+        border-top: 0
+    p
+        margin-bottom: 0
+    a
+        font-weight: bold
+    &:last-child
+        margin-bottom: 12px
+
+.comments__input
+    display: flex
+
+.comment__avatar
+    width: 44px
+    height: 44px
+    margin-right: 12px
+    background-color: #ddd

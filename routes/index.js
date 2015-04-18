@@ -104,7 +104,7 @@ router.get('/timeline-items', function(req, res){
 });
 router.post('/timeline-items', function(req, res){
     console.log(req.params);
-    timelineItems.push(req.body);
+    timelineItems.unshift(req.body);
 });
 
 
