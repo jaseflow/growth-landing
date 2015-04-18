@@ -87,8 +87,8 @@ var timelineItems = [
       actionText: 'ate',
       itemName: 'heaps of cake',
       comments: [
-        {name:'simon', text:'thanks'},
-        {name:'jason', text:'welcome'}
+        {name:'simon', text:'thanks', date: new Date},
+        {name:'jason', text:'welcome', date: new Date}
       ]
   },
   {
@@ -96,14 +96,16 @@ var timelineItems = [
       personName: 'Simon',
       profileUrl: 'http://simonlang.org',
       actionText: 'made angular work',
-      itemName: 'like a boss'
+      itemName: 'like a boss',
+      comments: [
+        {name:'guy', text:'HELLO', date: new Date}
+      ]
   }
 ];
 router.get('/timeline-items', function(req, res){
     res.send(timelineItems);
 });
 router.post('/timeline-items', function(req, res){
-    console.log(req.params);
     timelineItems.unshift(req.body);
 });
 

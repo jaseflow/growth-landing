@@ -44,4 +44,14 @@ app.controller('TimelineController', ['$scope', '$http', function($scope, $http)
             $scope.timeline.unshift($scope.newItem);
             $http.post('/timeline-items', $scope.newItem);
         }
+
+        $scope.addComment = function(item, text) {
+          var comment = {
+            date: new Date,
+            name: 'jase',
+            text: text
+          }
+          item.comments.push(comment);
+          // todo: persist to server
+        }
 }]);

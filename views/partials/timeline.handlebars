@@ -10,25 +10,17 @@
                 <div class="card__footer">
                     <div class="comments">
                         <div>
-                            <div class="comments__item">
-                                <small>43 mins ago</small>
-                                <p><a href="#">Tim Grant</a> I'm really proud of this picture!</p>
-                            </div>
-                            <div class="comments__item">
-                                <small>43 mins ago</small>
-                                <p><strong>You</strong> You've done a good job!</p>
-                            </div>
-                            <div class="comments__item">
-                                <small>43 mins ago</small>
-                                <p><a href="#">Tim Grant</a> All becuase of you!</p>
-                            </div>
-                            <div class="comments__item">
-                                <p><strong>You</strong> Anytime, my friend.</p>
+                            <div class="comments__item" ng-repeat="comment in item.comments">
+                                <small>{[{comment.date | fromNow}]}</small>
+                                <p><a href="#">{[{comment.name}]}</a> {[{comment.text}]}</p>
                             </div>
                         </div>
                         <div class="comments__input">
                             <img src="" alt="" class="comment__avatar">
-                            <input type="text" placeholder="Add a comment" class="u-flat input">
+                            <form ng-submit="addComment(item, newComment.text)">
+                              <input type="text" placeholder="Add a comment" class="u-flat input" ng-model="newComment.text">
+                              <button type="submit">Comment</button>
+                            </form>
                         </div>
                     </div>
                 </div>
