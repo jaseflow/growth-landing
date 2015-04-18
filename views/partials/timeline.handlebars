@@ -1,10 +1,62 @@
 <div class="timeline" ng-controller="TimelineController">
-    <h4>Latest timeline</h4>
+    <h4>{[{heading}]}</h4>
     <ul class="unstyled timeline__list">
-        <li class="timeline__item" ng-repeat="item in timeline">
-            <small class="timeline__time">{[{ item.date }]}</small>
-            <p class="u-flat"><a href="#">{[{ item.personName }]}</a> {[{ item.actionText }]} <strong>{[{ item.itemName }]}</strong>.</p>
+        <li ng-repeat="item in timeline" ng-class="{'warning': item.actionText == 'failed'}">
+            <div class="card">
+                <div class="card__body">
+                    <small class="timeline__time">{[{ item.date | fromNow }]}</small>
+                    <p class="u-flat"><a href="#">{[{ item.personName }]}</a> {[{ item.actionText }]} <strong>{[{ item.itemName }]}</strong>.</p>
+                </div>
+                <div class="card__footer">
+                    <div class="comments">
+                        <div>
+                            <div class="comments__item">
+                                <small>43 mins ago</small>
+                                <p><a href="#">Tim Grant</a> I'm really proud of this picture!</p>
+                            </div>
+                            <div class="comments__item">
+                                <small>43 mins ago</small>
+                                <p><strong>You</strong> You've done a good job!</p>
+                            </div>
+                            <div class="comments__item">
+                                <small>43 mins ago</small>
+                                <p><a href="#">Tim Grant</a> All becuase of you!</p>
+                            </div>
+                            <div class="comments__item">
+                                <p><strong>You</strong> Anytime, my friend.</p>
+                            </div>
+                        </div>
+                        <div class="comments__input">
+                            <img src="" alt="" class="comment__avatar">
+                            <input type="text" placeholder="Add a comment" class="u-flat input">
+                        </div>
+                    </div>
+                </div>
+            </div>
         </li>
         <li ng-if="!timeline.length">Loading...</li>
     </ul>
+
+    <div ng-if="newItem">
+        <div>Person: <input type="text" ng-model="newItem.personName"></div>
+        <select ng-model="newItem.itemName">
+            <option value="module">module</option>
+            <option value="video">video</option>
+            <option value="quiz">quiz</option>
+        </select>
+        <div ng-if="newItem.itemName == 'module'">
+            <h2>no</h2>
+        </div>
+        <div ng-if="newItem.itemName == 'video'">
+            <button class="btn btn--primary" ng-click="newItem.actionText = 'started watching'; addTimelineItem();">Start Watching</button>
+            <button class="btn btn--primary" ng-click="newItem.actionText = 'finished watching'; addTimelineItem();">Finish Watching</button>
+        </div>
+        <div ng-if="newItem.itemName == 'quiz'">
+            <button class="btn btn--primary" ng-click="newItem.actionText = 'failed'; addTimelineItem();">Failed</button>
+            <button class="btn btn--primary" ng-click="newItem.actionText = 'passed'; addTimelineItem();">Passed</button>
+        </div>
+        <div>
+        </div>
+    </div>
+</div>
 </div>

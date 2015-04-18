@@ -78,26 +78,29 @@ router.get('/admin/staff/:id', function(req, res){
     });
 });
 
+
+var timelineItems = [
+  {
+      date: 'yesterday',
+      personName: 'Jason',
+      profileUrl: 'https://github.com/jsncbt',
+      actionText: 'ate',
+      itemName: 'heaps of cake'
+  },
+  {
+      date: 'today',
+      personName: 'Simon',
+      profileUrl: 'http://simonlang.org',
+      actionText: 'made angular work',
+      itemName: 'like a boss'
+  }
+];
 router.get('/timeline-items', function(req, res){
-    var items = [
-      {
-          date: 'yesterday',
-          personName: 'Jason',
-          profileUrl: 'https://github.com/jsncbt',
-          actionText: 'ate',
-          itemName: 'heaps of cake'
-      },
-      {
-          date: 'today',
-          personName: 'Simon',
-          profileUrl: 'http://simonlang.org',
-          actionText: 'made angular work',
-          itemName: 'like a boss'
-      }
-    ];
-    setTimeout(function() {
-      res.send(items);
-    }, 2000);
+    res.send(timelineItems);
+});
+router.post('/timeline-items', function(req, res){
+    console.log(req.params);
+    timelineItems.unshift(req.body);
 });
 
 
