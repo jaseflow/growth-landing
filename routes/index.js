@@ -79,7 +79,7 @@ router.get('/admin/staff/:id', function(req, res){
 });
 
 router.get('/timeline-items', function(req, res){
-    res.send([
+    var items = [
       {
           date: 'yesterday',
           personName: 'Jason',
@@ -94,7 +94,10 @@ router.get('/timeline-items', function(req, res){
           actionText: 'made angular work',
           itemName: 'like a boss'
       }
-    ]);
+    ];
+    setTimeout(function() {
+      res.send(items);
+    }, 2000);
 });
 
 
