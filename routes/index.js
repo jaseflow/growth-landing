@@ -85,7 +85,11 @@ var timelineItems = [
       personName: 'Jason',
       profileUrl: 'https://github.com/jsncbt',
       actionText: 'ate',
-      itemName: 'heaps of cake'
+      itemName: 'heaps of cake',
+      comments: [
+        {name:'simon', text:'thanks'},
+        {name:'jason', text:'welcome'}
+      ]
   },
   {
       date: 'today',
