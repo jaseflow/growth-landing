@@ -3,9 +3,8 @@
     <ul class="unstyled timeline__list">
         <li class="timeline__item" ng-repeat="item in timeline">
             <small class="timeline__time">{[{ item.date }]}</small>
-            <p><a href="#">{[{ item.personName }]}</a> {[{ item.actiontext }]} <strong>{[{ item.itemName }]}</strong>.</p>
+            <p class="u-flat"><a href="#">{[{ item.personName }]}</a> {[{ item.actionText }]} <strong>{[{ item.itemName }]}</strong>.</p>
         </li>
         <li ng-if="!timeline.length">Loading...</li>
     </ul>
-    <pre ng-bind="timeline | json"></pre>
 </div>
