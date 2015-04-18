@@ -1,5 +1,6 @@
 @import "normalize.css"
 @import "skeleton.css"
+@import "variables"
 
 *
     box-sizing: border-box
@@ -8,8 +9,18 @@ body
     font-family: 'Roboto', sans-serif
     font-size: 13px
 
+a
+    color: $blue
+    transition: all 0.25s ease
+    &:hover
+        color: $darkBlue
+
 .hideme
     opacity:0
+
+.unstyled
+    list-style: none
+    margin: 0
 
 .login
     display: none
@@ -45,7 +56,6 @@ body
 
 .u-light
     font-weight: 100
-
 
 .container--small
     max-width: 600px
@@ -96,12 +106,17 @@ body
     top: 0
     left: 0
     width: 100%
+    background-color: $darkBlue
+    color: #fff
     .container
         display: flex
         align-items: center
         justify-content: space-between
         &:after
             display: none
+
+.sidebar
+
 
 .header--inner
     background: #1D3047

@@ -1,0 +1,17 @@
+.progress
+    display: block
+    height: 12px
+    background-color: #eee
+    border-radius: 2px
+    position: relative
+    overflow: hidden
+
+.progress__bar
+    height: 100%
+    position: absolute
+    width: 100%
+    left: -100%
+    transition: all 0.25s ease
+    background-color: $green
+    transform: translateZ(0)
+    will-change: transform

@@ -1,0 +1,43 @@
+.wrapper .activity
+    position: absolute
+    right: 0
+    top: 70px
+    z-index: 10
+    bottom: 0
+    width: 400px
+    overflow-y: auto
+
+.activity
+    background-color: #F9F9F9
+    padding: 24px 48px
+
+.activity__list
+    padding-left: 24px
+    border-left: 2px solid rgba(0,0,0,0.15)
+
+.activity__item
+    margin: 0
+    padding-bottom: 36px
+    position: relative
+    img
+        margin-top: 12px
+    &:before
+        top: 0
+        position: absolute
+        left: -32px
+        width: 12px
+        height: 12px
+        border-radius: 50%
+        border: 1px solid rgba(0,0,0,0.5)
+        background: #F9F9F9
+        display: block
+        content: ''
+    p
+        margin-bottom: 0
+
+.activity__time
+    font-size: 11px
+    text-transform: uppercase
+    color: rgba(0,0,0,0.5)
+    margin-bottom: 6px
+    display: block

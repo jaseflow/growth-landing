@@ -1,0 +1,30 @@
+<div class="menu">
+    <div class="menu__hd">
+        <a class="flyout-link menu__link" href="/admin">
+            <div>
+                <span>
+                    {{ user.firstName }}
+                    {{ user.lastName }}
+                </span>
+                <h4 class="u-flat menu__title">{{ user.company }}</h4>
+            </div>
+            <img src="/images/growth-cube.png" style="width: 24px; margin-right: 7px" alt="">
+            <div class="flyout__wrap">
+                <ul class="unstyled flyout__menu">
+                    <li><a href="#">Administrators</a></li>
+                    <li><a href="#">Help &amp; Feedback</a></li>
+                    <li><a href="#">Settings</a></li>
+                </ul>
+            </div>
+        </a>
+    </div>
+    <div class="menu__body">
+        <div class="menu__group">
+            <ul class="unstyled menu__list">
+                {{#each menuItems }}
+                <li><a href="/admin" class="menu__link"><span>{{ text }}</span><i class="fa fa-{{ icon }} menu__icon"></i></a></li>
+                {{/each}}
+            </ul>
+        </div>
+    </div>
+</div>

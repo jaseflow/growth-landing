@@ -15,7 +15,8 @@ module.exports = function(grunt) {
             },
             compile: {
                 files: {
-                    'public/css/styles.css': 'source/styles/styles.styl'
+                    'public/css/styles.css': 'styles/styles.styl',
+                    'public/css/admin.css': 'styles/admin.styl'
                 }
             }
         },
@@ -33,18 +34,6 @@ module.exports = function(grunt) {
             } 
         },
 
-        connect: {
-            server: {
-                options: {
-                    port: 8000,
-                    useAvailablePort: true,
-                    base: 'public',
-                    hostname: '*',
-                    livereload: true
-                }
-            }
-        },
-
         autoprefixer: {
             options: {},
             no_dest: {
@@ -54,7 +43,7 @@ module.exports = function(grunt) {
 
         watch: {
             stylus: {
-                files: ['source/styles/styles.styl'],
+                files: ['styles/**/*.styl'],
                 tasks: ['stylus']
             },
             livereload: {
@@ -69,7 +58,7 @@ module.exports = function(grunt) {
                     'public/login.html',
                     'public/admin.html',
                     'public/admin-add.html',
-                    'public/admin-added.html'
+                    'public/admin-added.html',
                 ]
             }
         },
@@ -111,6 +100,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-autoprefixer');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-aws-s3');
+    grunt.loadNpmTasks('grunt-contrib-handlebars');
 
     grunt.registerTask('default', ['stylus','autoprefixer']);
     grunt.registerTask('server', ['connect','watch']);

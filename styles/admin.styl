@@ -1,0 +1,61 @@
+@import "normalize.css"
+@import "skeleton.css"
+@import "variables"
+@import "components/menu"
+@import "components/buttons"
+@import "components/forms"
+@import "components/courses"
+@import "components/modules"
+@import "components/progress"
+@import "components/cards"
+@import "components/staff"
+@import "components/flyouts"
+@import "components/activity"
+
+html
+body
+    height: 100%
+
+body
+    background-color: #eee
+
+img
+    max-width: 100%
+
+.wrapper
+    position: relative
+    padding-left: 60px
+    height: 100%
+
+.wrapper__hd
+    height: 70px
+    padding: 0 24px
+    display: flex
+    align-items: center
+    justify-content: space-between
+    background-color: #fff
+    box-shadow: 0 1px 1px rgba(0,0,0,0.3)
+    position: relative
+    z-index: 20
+
+.wrapper__body
+    padding: 24px
+
+.wrapper__title
+    font-size: 20px
+    font-weight: 300
+    color: #333
+
+.wrapper__action
+    font-weight: bold
+    color: $blue
+    font-size: 16px
+    text-decoration: none
+
+.menu
+    position: absolute
+    top: 0
+    left: -240px
+    height: 100%
+    width: $menuWidth
+    z-index: 100

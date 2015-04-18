@@ -1,0 +1,25 @@
+.link-list
+    max-width: 420px
+    li
+        border-top: 1px solid #ddd
+        &:first-child
+            border-top: 0
+            a
+                padding-top: 0
+
+.link-list__link
+    text-decoration: none 
+    display: flex
+    align-items: center
+    justify-content: space-between
+    padding: 24px 0
+    &:hover
+        color: $darkBlue
+    span
+        font-weight: bold
+        color: $blue
+    
+.link-list__helper
+    display: block
+    font-size: 14px
+    color: #555
