@@ -1,12 +1,14 @@
-<h4>Your staff <span>{{user.staff.length}}</span></h4>
-<ul class="unstyled">
-    {{#each user.staff}}
-        <li>
-            <a href="/admin/staff/{{ id }}" id="{{ id }}">{{ firstName }} {{ lastName }}</a>
-        </li>
-    {{/each }}
-</ul>
+{{> timeline }}
 
-<div class="activity">
-    {{> timeline }}
+<div class="wrapper__sidebar">
+    <div class="activity">
+        <h4>Your staff <span>{{user.staff.length}}</span></h4>
+        <ul class="unstyled">
+            {{#each user.staff}}
+                <li>
+                    <a href="/admin/staff/{{ id }}" id="{{ id }}">{{ firstName }} {{ lastName }}</a>
+                </li>
+            {{/each }}
+        </ul>
+    </div>
 </div>
