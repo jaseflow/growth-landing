@@ -1,11 +1,35 @@
 <div class="timeline" ng-controller="TimelineController">
-    <h4>Latest timeline</h4>
+    <h4>{[{heading}]}</h4>
     <ul class="unstyled timeline__list">
         <li class="timeline__item" ng-repeat="item in timeline">
             <small class="timeline__time">{[{ item.date }]}</small>
-            <p><a href="#">{[{ item.personName }]}</a> {[{ item.actiontext }]} <strong>{[{ item.itemName }]}</strong>.</p>
+	    <p><a href="#">{[{ item.personName }]}</a> {[{ item.actionText }]} <strong>{[{ item.itemName }]}</strong>.</p>
+	    <!-- <button class="btn btn--primary" ng-click="">Edit</button> -->
         </li>
         <li ng-if="!timeline.length">Loading...</li>
     </ul>
-    <pre ng-bind="timeline | json"></pre>
+
+  <button class="btn btn--primary" ng-click="newItem = {}">Add New Timeline</button>
+
+  <div ng-if="newItem">
+    <div>Person: <input type="text" ng-model="newItem.personName"></div>
+    <select ng-model="newItem.itemName">
+      <option value="module">module</option>
+      <option value="video">video</option>
+      <option value="quiz">quiz</option>
+    </select>
+    <div ng-if="newItem.itemName == 'module'">
+      <h2>no</h2>
+    </div>
+    <div ng-if="newItem.itemName == 'video'">
+      <button class="btn btn--primary" ng-click="newItem.actionText = 'started watching'; addTimelineItem();">Start Watching</button>
+      <button class="btn btn--primary" ng-click="newItem.actionText = 'finished watching'; addTimelineItem();">Finish Watching</button>
+    </div>
+    <div ng-if="newItem.itemName == 'quiz'">
+      <button class="btn btn--primary" ng-click="newItem.actionText = 'failed'; addTimelineItem();">Failed</button>
+      <button class="btn btn--primary" ng-click="newItem.actionText = 'passed'; addTimelineItem();">Passed</button>
+    </div>
+    <div>
+    </div>
+  </form>
 </div>
