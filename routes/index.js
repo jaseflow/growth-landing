@@ -78,5 +78,27 @@ router.get('/admin/staff/:id', function(req, res){
     });
 });
 
+router.get('/timeline-items', function(req, res){
+    var items = [
+      {
+          date: 'yesterday',
+          personName: 'Jason',
+          profileUrl: 'https://github.com/jsncbt',
+          actionText: 'ate',
+          itemName: 'heaps of cake'
+      },
+      {
+          date: 'today',
+          personName: 'Simon',
+          profileUrl: 'http://simonlang.org',
+          actionText: 'made angular work',
+          itemName: 'like a boss'
+      }
+    ];
+    setTimeout(function() {
+      res.send(items);
+    }, 2000);
+});
+
 
 module.exports = router;
